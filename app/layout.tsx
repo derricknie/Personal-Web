@@ -8,6 +8,8 @@ const inter = Inter({
   display: "swap",
 });
 
+// primarySiteUrl: https://erhan-nie-portfolio.vercel.app/
+// chinaMirrorUrl: Paste the Tencent CloudBase URL here after deployment.
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://erhan-nie-portfolio.vercel.app").replace(/\/$/, "");
 const canonicalUrl = `${siteUrl}/`;
 const title =

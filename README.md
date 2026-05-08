@@ -35,6 +35,8 @@ The homepage is already configured to use `/images/profile.jpg`. Until that file
 
 ## Deploy To Vercel For Free
 
+The `main` branch is the global Vercel production version. This `china-mirror` branch is prepared for static export so Tencent CloudBase can host an identical static mirror.
+
 1. Push this project to a GitHub repository.
 2. Go to [Vercel](https://vercel.com/) and create a free account if needed.
 3. Click **Add New Project** and import the GitHub repository.
@@ -53,6 +55,65 @@ NEXT_PUBLIC_SITE_URL=https://your-public-vercel-url.vercel.app
 ```
 
 For `public/robots.txt`, update the sitemap URL manually because it is a static file.
+
+## Deploy Identical China Mirror To Tencent CloudBase
+
+Use this section for the mainland China mirror only. The Vercel site remains the global version:
+
+```text
+https://erhan-nie-portfolio.vercel.app/
+```
+
+Recommended CloudBase setup:
+
+1. Log in to Tencent Cloud.
+2. Open CloudBase Webify or CloudBase Static Website Hosting.
+3. Create a new web application or static website.
+4. Connect the GitHub repository if Git deployment is supported.
+5. Select the `china-mirror` branch.
+6. Select a static site option. If CloudBase asks for a framework, choose Next.js only if it supports static output; otherwise choose static website/custom build.
+7. Use this build command:
+
+```bash
+npm install && npm run build
+```
+
+8. Use this output directory:
+
+```text
+out
+```
+
+9. Deploy.
+10. Copy the Tencent CloudBase default HTTPS domain.
+11. Test the Tencent CloudBase link from mainland China.
+12. Keep the Vercel link as the global version.
+13. Use the Tencent CloudBase link as the mainland China mirror.
+
+The static export keeps the same content, layout, images, bilingual language switch, project archive, SEO metadata, sitemap, and robots file. The current canonical URL intentionally remains the Vercel URL because Vercel is the primary public site.
+
+### Manual CloudBase Upload
+
+If Git deployment does not work:
+
+1. Run the build locally:
+
+```bash
+npm run build
+```
+
+2. Find the static output folder:
+
+```text
+out/
+```
+
+3. Compress or upload the contents of `out/`.
+4. Upload those contents to CloudBase Static Website Hosting.
+5. Make sure `index.html` is at the root of the hosting directory.
+6. Test the default CloudBase domain.
+
+Do not upload the `out` folder itself as the root folder unless CloudBase specifically asks for a folder. The files inside `out/` should become the website root.
 
 ## Prepare Google Indexing
 
