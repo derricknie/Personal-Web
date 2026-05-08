@@ -1,0 +1,11 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="desc">A clean placeholder for Erhan Nie's portfolio portrait.</desc>
+  <rect width="900" height="1100" rx="40" fill="#F4F6F8"/>
+  <rect x="42" y="42" width="816" height="1016" rx="32" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <circle cx="450" cy="430" r="148" fill="#D7E7FA"/>
+  <path d="M222 861C250 714 335 641 450 641C565 641 650 714 678 861" fill="#E8F1FC"/>
+  <path d="M313 860C336 775 382 733 450 733C518 733 564 775 587 860" fill="#B9D7F6"/>
+  <text x="450" y="963" text-anchor="middle" fill="#5F6773" font-family="Arial, sans-serif" font-size="34" font-weight="600">Add profile.jpg</text>
+  <text x="450" y="1010" text-anchor="middle" fill="#8A93A0" font-family="Arial, sans-serif" font-size="24">public/images/profile.jpg</text>
+</svg>
